@@ -25,6 +25,10 @@ socketio = SocketIO(app)
 api.add_resource(AlarmClock, "/alarm_clock")
 api.add_resource(AlarmClockList, "/list_alarm_clock")
 
+@socketio.on('my event', namespace='/test')
+def handle_my_custom_event():
+    emit('my response', {"1":"1"}, broadcast=True)
+
 
 
 
