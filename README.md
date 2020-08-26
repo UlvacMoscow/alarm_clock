@@ -6,7 +6,8 @@ python3 manage.py db init
 python3 manage.py db migrate
 в папке /migrations/versions/ будет создаcт файл миграции 
 
-для того что бы применить миграции новые миграции
+для того что бы применить новые миграции
 необходиомо в терминале ввести
 python3 manage.py db upgrade
 бд обновится согласно тем изменениям которые были в /migrations/versions/
+или создастся если это первое обращение.
